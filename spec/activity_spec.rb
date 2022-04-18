@@ -12,4 +12,10 @@ describe Activity do
     expect(activity.name).to eq "Brunch"
     expect(activity.participants).to eq({})
   end
+
+  it "can add participants" do
+    activity.add_participant("Maria", 20)
+
+    expect(activity.participants).to eq({{"Maria" => 20}})
+  end
 end
