@@ -7,4 +7,9 @@ describe Activity do
   it "exists" do
     expect(activity).to be_a Activity
   end
+
+  it "has attributes" do
+    expect(activity.name).to eq "Brunch"
+    expect(activity.participants).to eq({})
+  end
 end
