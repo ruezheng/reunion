@@ -18,4 +18,10 @@ describe Activity do
 
     expect(activity.participants).to eq({"Maria" => 20})
   end
+
+  it "can return total cost of participant" do
+    activity.add_participant("Maria", 20)
+
+    expect(activity.total_cost).to eq(20)
+  end
 end
