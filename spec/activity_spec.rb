@@ -40,7 +40,7 @@ describe Activity do
     expect(activity.split).to eq(30)
   end
 
-  xit "can show amount owed from each participant" do
+  it "can show amount owed from each participant" do
     activity.add_participant("Maria", 20)
     activity.add_participant("Luther", 40)
 

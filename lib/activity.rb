@@ -19,9 +19,15 @@ class Activity
     cost
   end
 
+  def split
+    total_cost.to_f / @participants.count
+  end
+
+  def owed
+    amount_owed = {}
+    @participants.each do |participant, value|
+      amount_owed[participant] = (split - value)
+    end
+    amount_owed
+  end
 end
-
-
-# For the `split` method, it is assumed that the cost is evenly distributed amongst participants. It should be the total cost divided by the number of participants.
-
-# For the `owed` method, the amount each person owes is the difference between what they paid and the `split`. If a participant paid less than their fair share they owe a positive amount. If a participant paid more than their fair share they owe a negative amount (meaning they are owed money).
