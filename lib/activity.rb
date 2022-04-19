@@ -13,4 +13,12 @@ class Activity
     @participants = {participant => cost}
   end
 
+  def total_cost
+    cost = 0
+    @participants.each do |key, value|
+      cost += value
+    end
+    cost
+  end
+
 end
