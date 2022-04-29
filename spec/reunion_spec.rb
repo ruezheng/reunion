@@ -56,7 +56,7 @@ describe Reunion do
 
     reunion.add_activity(activity_2)
 
-    expect(reunion.total_cost).to eq(180)
+    expect(reunion.breakout).to eq({"Maria" => -10, "Luther" => -30, "Louis" => 40})
   end
 
 end
